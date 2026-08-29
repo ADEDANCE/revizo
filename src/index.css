@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+
+@theme {
+  --color-deep-navy: #0B1120;
+  --color-slate: #1E293B;
+  --color-indigo: #6366F1;
+  --color-indigo-hover: #818CF8;
+  --color-off-white: #F8FAFC;
+  --color-emerald: #10B981;
+  --color-danger: #EF4444;
+  --color-warning: #F59E0B;
+}
