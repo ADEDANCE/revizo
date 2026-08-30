@@ -13,7 +13,9 @@ export const Navbar = () => {
     <nav className=" sticky top-0 bg-slate border border-gray-3 py-2 px-3 shadow">
       <div className="">
         <div className=" hidden  lg:flex items-center justify-between">
-          <p className=" text-off-white text-2xl font-bold">Revizo</p>
+          <a href="/" className=" text-off-white text-2xl font-bold">
+            Revizo
+          </a>
 
           <div className="  hidden lg:flex justify-between text-off-white gap-6">
             {" "}
@@ -21,17 +23,25 @@ export const Navbar = () => {
             <a href="">Study tools</a>
           </div>
           <div className=" hidden lg:flex gap-4 items-center">
-            <a href="" className=" text-indigo">
-              {" "}
+            <Button
+              className=" bg-indigo rounded-2xl"
+              onClick={() => navigate("/login")}
+            >
               Log In
-            </a>
-            <Button className=" bg-indigo rounded-2xl"> Start Studying</Button>
+            </Button>
+            <Button
+              className=" bg-indigo rounded-2xl"
+              onClick={() => navigate("/signup")}
+            >
+              {" "}
+              Start Studying
+            </Button>
           </div>
         </div>
 
         {/* Hamburger menu for small screens */}
         <div className=" text-off-white flex items-center justify-between lg:hidden w-full">
-          <a href="">
+          <a href="/">
             <p className=" text-2xl font-bold">Revizo</p>
           </a>
 
