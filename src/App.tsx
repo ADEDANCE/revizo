@@ -8,6 +8,7 @@ import DashboardLayout from "./layout/DashboardLayout";
 import Dashboard from "./pages/Dashboard";
 import PublicLayout from "./layout/PublicLayout";
 import { History } from "./pages/History";
+import StudySession from "./pages/StudySession";
 
 const App = () => {
   return (
@@ -23,8 +24,10 @@ const App = () => {
         {/* Dashboard */}
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          < Route path="/history" element={<History />} />
+          <Route path="/history" element={<History />} />
         </Route>
+
+        <Route path="/history/:id" element={<StudySession />} />
       </Routes>
     </BrowserRouter>
   );
