@@ -2,7 +2,7 @@ import { Card } from "../components/Card";
 
 export const HowItWork = () => {
   return (
-    <section className=" w-full px-6 md:px-20 py-6">
+    <section id="howItWorks" className=" w-full px-6 md:px-20 py-6">
       <div className=" mx-auto text-center">
         <p className=" text-slate-300">YOUR MATERIAL, MADE USEFUL</p>
         <h2 className=" text-2xl text-off-white">

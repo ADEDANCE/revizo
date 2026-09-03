@@ -2,7 +2,7 @@ import { Card } from "../components/Card";
 
 export const Tools = () => {
   return (
-    <section className=" w-full px-6 md:px-20 py-6">
+    <section id="tools" className=" w-full px-6 md:px-20 py-6">
       <div className=" mx-auto text-center">
         <h2 className=" text-2xl text-off-white ">
           A study toolkit that adapts to you.

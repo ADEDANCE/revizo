@@ -19,8 +19,8 @@ export const Navbar = () => {
 
           <div className="  hidden lg:flex justify-between text-off-white gap-6">
             {" "}
-            <a href="">HoW It Works</a>
-            <a href="">Study tools</a>
+            <a href="#howItWorks">HoW It Works</a>
+            <a href="#tools">Study tools</a>
           </div>
           <div className=" hidden lg:flex gap-4 items-center">
             <Button
@@ -63,7 +63,7 @@ export const Navbar = () => {
             </a>
 
             <a
-              href="/#features"
+              href="/#tools"
               className="  hover:bg-indigo-hover  hover:rounded-xl py-2 px-4"
               onClick={closeMenu}
             >

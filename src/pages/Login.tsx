@@ -68,7 +68,7 @@ export const Login = () => {
   return (
     <>
       {isLoading && <LoadingOverlay message="login you in" />}
-      <section className="bg-deep-navy w-full px-7 md:px-40 py-16">
+      <section className="bg-deep-navy w-full px-7  md:px-64 py-16">
         <div className=" text-center">
           <h1 className=" text-off-white font-bold text-4xl mb-6">Revizo</h1>
 

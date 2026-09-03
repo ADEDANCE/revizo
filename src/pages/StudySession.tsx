@@ -10,6 +10,7 @@ type StudySessionData = {
   id: string;
   title: string;
   type: "SUMMARY" | "EXPLANATION" | "CBT" | "FLASHCARDS";
+  requestedCount?: number | null;
   result: {
     summary?: string;
     explanation?: string;
@@ -107,6 +108,7 @@ const StudySession = () => {
         <CBTViewer
           title={session.title}
           questions={session.result.questions || []}
+          requestedCount={session.requestedCount ?? 0}
         />
       );
 
