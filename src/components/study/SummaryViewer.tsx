@@ -7,7 +7,7 @@ interface SummaryViewerProps {
 
 const SummaryViewer = ({ title, summary }: SummaryViewerProps) => {
   return (
-    <StudyLayout title="BIO 101 — Cell Division" type="SUMMARY">
+    <StudyLayout title={title} type="SUMMARY">
       <div className="rounded-2xl border border-slate-700 bg-slate-900 p-5 sm:p-6">
         <h2 className="font-bold text-off-white">{title}</h2>
 
