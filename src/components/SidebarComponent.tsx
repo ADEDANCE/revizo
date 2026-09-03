@@ -25,11 +25,11 @@ export const SidebarComponent = () => {
       url: "/history",
       icon: History,
     },
-    {
-      title: "Settings",
-      url: "/dashboard/settings",
-      icon: Settings,
-    },
+    // {
+    //   title: "Settings",
+    //   url: "/dashboard/settings",
+    //   icon: Settings,
+    // },
   ];
 
   const location = useLocation();
