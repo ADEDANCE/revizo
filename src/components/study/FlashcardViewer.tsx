@@ -13,10 +13,7 @@ interface FlashcardViewerProps {
   flashcards: Flashcard[];
 }
 
-const FlashcardViewer = ({
-  title,
-  flashcards,
-}: FlashcardViewerProps) => {
+const FlashcardViewer = ({ title, flashcards }: FlashcardViewerProps) => {
   const [currentCard, setCurrentCard] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
 
@@ -41,7 +38,7 @@ const FlashcardViewer = ({
   };
 
   return (
-    <StudyLayout title="BIO 101 — Cell Division" type="FLASHCARDS">
+    <StudyLayout title={title} type="FLASHCARDS">
       <div className="rounded-2xl border border-slate-700 bg-slate-900 p-5 sm:p-6">
         {/* Header */}
         <div className="flex items-center justify-between">
@@ -65,10 +62,7 @@ const FlashcardViewer = ({
 
         {/* Controls */}
         <div className="mt-5 flex items-center justify-between gap-3">
-          <Button
-            onClick={handlePrevious}
-            disabled={currentCard === 0}
-          >
+          <Button onClick={handlePrevious} disabled={currentCard === 0}>
             <span className="flex items-center gap-2">
               <IoIosArrowBack />
               <span>Previous</span>
