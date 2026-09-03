@@ -3,15 +3,15 @@ import api from "./api";
 export const generateStudyResource = async (
   file: File,
   type: string,
-  count?: number
+  questionCount?: number,
 ) => {
   const formData = new FormData();
 
   formData.append("file", file);
   formData.append("type", type);
 
-  if (type === "CBT" && count) {
-    formData.append("count", count.toString());
+  if (type === "CBT" && questionCount !== undefined) {
+    formData.append("questionCount", questionCount.toString());
   }
 
   const response = await api.post("/study/generate", formData, {

@@ -11,14 +11,17 @@ interface CBTQuestion {
 interface CBTViewerProps {
   title: string;
   questions: CBTQuestion[];
+  requestedCount: number;
 }
 
-const CBTViewer = ({ title, questions }: CBTViewerProps) => {
+const CBTViewer = ({ title, questions, requestedCount }: CBTViewerProps) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showAnswer, setShowAnswer] = useState(false);
 
   const question = questions[currentQuestion];
+
+  const generatedCount = questions.length;
 
   const handleSelectAnswer = (index: number) => {
     if (showAnswer) return;
@@ -58,6 +61,11 @@ const CBTViewer = ({ title, questions }: CBTViewerProps) => {
             {currentQuestion + 1} / {questions.length}
           </span>
         </div>
+
+        <p className=" mt-2 text-xs text-slate-300">
+          {generatedCount} of {requestedCount} generated Based on the content
+          available in your uploaded material.
+        </p>
 
         <div className="mt-6 border-t border-slate-700 pt-6">
           <p className="text-sm text-slate-400">
