@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import { Navbar } from "./components/Navbar";
 import { Landingpage } from "./pages/Landingpage";
-import Footer from "./sections/Footer";
 import Signup from "./pages/Signup";
 import { Login } from "./pages/Login";
 import DashboardLayout from "./layout/DashboardLayout";
@@ -27,7 +25,8 @@ const App = () => {
           <Route path="/history" element={<History />} />
         </Route>
 
-        <Route path="/history/:id" element={<StudySession />} />
+        <Route path="/study/:id" element={<StudySession />} />
+        {/* <Route path="/history/:id" element={<StudySession />} /> */}
       </Routes>
     </BrowserRouter>
   );
