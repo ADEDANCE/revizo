@@ -10,6 +10,8 @@ import { generateStudyResource } from "../services/studyService";
 const Dashboard = () => {
   const navigate = useNavigate();
 
+  const [questionCount, setQuestionCount] = useState(10);
+
   const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -58,7 +60,11 @@ const Dashboard = () => {
     setIsGenerating(true);
 
     try {
-      const result = await generateStudyResource(selectedFile, selectedType);
+      const result = await generateStudyResource(
+        selectedFile,
+        selectedType,
+        selectedType === "CBT" ? questionCount : undefined,
+      );
 
       console.log("Generated study session:", result);
 
@@ -151,6 +157,39 @@ const Dashboard = () => {
               onClick={() => setSelectedType("FLASHCARDS")}
             />
           </div>
+
+          {selectedType === "CBT" && (
+            <div className="mt-6 text-left">
+              <label
+                htmlFor="question-count"
+                className="block font-semibold mb-2"
+              >
+                How many questions would you like?
+              </label>
+
+              <select
+                id="question-count"
+                value={questionCount}
+                onChange={(e) => setQuestionCount(Number(e.target.value))}
+                className="w-full rounded-xl border border-slate-400 bg-slate px-4 py-3 text-off-white"
+              >
+                <option value={5}>5 questions</option>
+                <option value={10}>10 questions</option>
+                <option value={15}>15 questions</option>
+                <option value={20}>20 questions</option>
+                <option value={25}>25 questions</option>
+                <option value={30}>30 questions</option>
+                <option value={40}>40 questions</option>
+                <option value={50}>50 questions</option>
+                <option value={75}>75 questions</option>
+                <option value={100}>100 questions</option>
+              </select>
+
+              <p className="text-slate-400 text-sm mt-2">
+                Choose between 5 and 100 questions.
+              </p>
+            </div>
+          )}
 
           <Button
             type="button"

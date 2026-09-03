@@ -6,7 +6,7 @@ const DashboardLayout = () => {
     <SidebarProvider>
       {" "}
       <SidebarComponent />
-      <main className="flex-1 bg-deep-navy text-off-white">
+      <main className="min-h-screen flex-1 bg-deep-navy text-off-white">
         <SidebarTrigger />
         <Outlet />
       </main>
