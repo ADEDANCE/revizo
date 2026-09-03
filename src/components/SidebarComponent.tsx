@@ -10,7 +10,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-import { LayoutDashboard, History, Settings } from "lucide-react";
+import { LayoutDashboard, History } from "lucide-react";
 
 export const SidebarComponent = () => {
   const navigation = [
