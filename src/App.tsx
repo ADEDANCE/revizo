@@ -23,9 +23,9 @@ const App = () => {
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/history" element={<History />} />
+          <Route path="/study/:id" element={<StudySession />} />
         </Route>
 
-        <Route path="/study/:id" element={<StudySession />} />
         {/* <Route path="/history/:id" element={<StudySession />} /> */}
       </Routes>
     </BrowserRouter>
